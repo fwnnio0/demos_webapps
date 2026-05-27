@@ -75,7 +75,7 @@ archivos nuevos y las modificaciones realizadas al código.
 git add .
 ````
 
-## 9. Crear un **commmit** o punto de control
+## 9. Crear un **commit** o punto de control
 
 Crear un punto de control (**commit**) con los cambios realizados
 al proyecto.
