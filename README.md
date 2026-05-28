@@ -16,7 +16,7 @@ python3 -m venv .venv
 
 ## 2. Crear el archivo .gitignore
 
-Crear el archivo **.gitingnore** para configurar los recursos que 
+Crear el archivo **.gitignore** para configurar los recursos que 
 no necesitamos que se sincronicen con el repositorio.
 
 ````shell
