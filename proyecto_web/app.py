@@ -16,6 +16,7 @@ urls = (
 app = web.application(urls, globals())
 render = web.template.render('plantillas/', base='base')
 
+
 class Inicio:
     def GET(self):
         return render.inicio()
@@ -55,6 +56,7 @@ class Acerca:
 class Panel:
     def GET(self):
         return render.panel()
+
 
 if __name__ == "__main__":
     app.run()
