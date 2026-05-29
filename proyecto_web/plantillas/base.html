@@ -1,0 +1,26 @@
+$def with (contenido)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Sitio</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #222; }
+        nav { text-align: center; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid #ddd; }
+        nav a { margin: 0 8px; text-decoration: none; color: #0066cc; font-size: 14px; }
+        nav a:hover { text-decoration: underline; }
+        main { text-align: center; padding: 40px 0; }
+        h1 { font-size: 1.8rem; margin-bottom: 10px; }
+        p { color: #555; font-size: 1rem; }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="/">Inicio</a> <a href="/sesion">Iniciar sesión</a> <a href="/registro">Registro</a>
+    <a href="/perfil">Perfil</a> <a href="/panel">Panel</a> <a href="/notificaciones">Notificaciones</a>
+    <a href="/configuracion">Configuración</a> <a href="/acerca">Acerca de</a>
+    <a href="/contacto">Contacto</a> <a href="/cerrar">Cerrar sesión</a>
+</nav>
+<main>$:contenido</main>
+</body>
+</html>

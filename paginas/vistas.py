@@ -1,6 +1,6 @@
 from flask import render_template
 
-class BasePage:
+class PaginaBase:
     ruta = "/"
     titulo = "Página"
     mensaje = "Bienvenido."
@@ -10,52 +10,52 @@ class BasePage:
                                titulo=self.titulo,
                                mensaje=self.mensaje)
 
-class PaginaInicio(BasePage):
+class PaginaInicio(PaginaBase):
     ruta = "/"
     titulo = "Inicio"
     mensaje = "Bienvenido a la página de inicio."
 
-class PaginaLogin(BasePage):
+class PaginaLogin(PaginaBase):
     ruta = "/login"
     titulo = "Login"
     mensaje = "Bienvenido a este tu espacio."
 
-class PaginaRegistro(BasePage):
+class PaginaRegistro(PaginaBase):
     ruta = "/registro"
     titulo = "Registro"
     mensaje = "Crea tu cuenta aquí."
 
-class PaginaPerfil(BasePage):
+class PaginaPerfil(PaginaBase):
     ruta = "/perfil"
     titulo = "Mi Perfil"
     mensaje = "Esta es tu información personal."
 
-class PaginaDashboard(BasePage):
+class PaginaDashboard(PaginaBase):
     ruta = "/dashboard"
     titulo = "Dashboard"
     mensaje = "Aquí están tus estadísticas."
 
-class PaginaMensajes(BasePage):
+class PaginaMensajes(PaginaBase):
     ruta = "/mensajes"
     titulo = "Mensajes"
     mensaje = "Tu bandeja de mensajes."
 
-class PaginaNotificaciones(BasePage):
+class PaginaNotificaciones(PaginaBase):
     ruta = "/notificaciones"
     titulo = "Notificaciones"
     mensaje = "Tus alertas y avisos recientes."
 
-class PaginaConfiguracion(BasePage):
+class PaginaConfiguracion(PaginaBase):
     ruta = "/configuracion"
     titulo = "Configuración"
     mensaje = "Ajusta las opciones de tu cuenta."
 
-class PaginaAyuda(BasePage):
+class PaginaAyuda(PaginaBase):
     ruta = "/ayuda"
     titulo = "Ayuda"
     mensaje = "¿Necesitas ayuda? Estamos aquí."
 
-class PaginaSalir(BasePage):
+class PaginaSalir(PaginaBase):
     ruta = "/logout"
     titulo = "Cerrar Sesión"
     mensaje = "Has cerrado sesión. ¡Hasta pronto!"
