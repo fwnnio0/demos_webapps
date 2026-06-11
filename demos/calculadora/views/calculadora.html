@@ -1,4 +1,4 @@
-$def with(titulo, descripcion)
+$def with(titulo, descripcion, resultado)
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,11 +14,11 @@ $def with(titulo, descripcion)
 <label>Número 2</label>
 <input type="number" name="numero_2" id="numero_2"><br>
 
-<label>Resultado:</label>
-<input type="number" name="resultado" id="resultado"><br>
-
-<button name ="suma">Sumar</button>
+<button name="suma">Sumar</button>
 </form>
+
+$if resultado != "":
+    <p>Resultado: $resultado</p>
 
 <p>$descripcion</p>
 <a href="/">Index</a>
