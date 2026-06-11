@@ -1,26 +1,44 @@
-$def with(titulo, descripcion, resultado)
+$def with(numero_1, numero_2, resultado)
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>Calculadora FW</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; }
+        input, select, button { padding: 10px; margin: 5px; font-size: 16px; }
+        h2 { color: green; }
+    </style>
 </head>
 <body>
-<h1>$titulo</h1>
+    <h1>Calculadora Web con web.py</h1>
+    
+    <form method="POST">
+        <label>Número 1:</label><br>
+        <input type="number" step="any" name="numero_1" value="$numero_1" required><br><br>
+        
+        <label>Operación:</label><br>
+        <select name="operacion">
+            <option value="sumar">Sumar +</option>
+            <option value="restar">Restar -</option>
+            <option value="multiplicar">Multiplicar *</option>
+            <option value="dividir">Dividir /</option>
+            <option value="raiz">Raíz cuadrada √ solo usa Número 1</option>
+            <option value="potencia">Potencia ^</option>
+            <option value="modulo">Módulo % residuo</option>
+            <option value="limpiar">Limpiar C</option>
+        </select><br><br>
+        
+        <label>Número 2:</label><br>
+        <input type="number" step="any" name="numero_2" value="$numero_2" required><br><br>
+        
+        <button type="submit">Calcular</button>
+    </form>
 
-<form method="POST">
-<label>Número 1</label>
-<input type="number" name="numero_1" id="numero_1"><br>
+        <h2>Resultado: $resultado</h2>
 
-<label>Número 2</label>
-<input type="number" name="numero_2" id="numero_2"><br>
-
-<button name="suma">Sumar</button>
-</form>
-
-$if resultado != "":
-    <p>Resultado: $resultado</p>
-
-<p>$descripcion</p>
-<a href="/">Index</a>
+    <br>
+    <a href="/">Volver al Index</a>
 </body>
 </html>
