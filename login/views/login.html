@@ -1,0 +1,12 @@
+$def with(usuario, mensaje)
+<!DOCTYPE html>
+<html><body>
+<h1>Login</h1>
+<form method="POST">
+    Usuario: <input type="text" name="usuario" value="$usuario"><br>
+    Password: <input type="password" name="password"><br>
+    <button>Entrar</button>
+</form>
+$if mensaje != "":
+    <h2>$mensaje</h2>
+</body></html>
