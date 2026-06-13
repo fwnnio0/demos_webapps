@@ -1,0 +1,13 @@
+$def with(peso, altura, imc, estado)
+<!DOCTYPE html>
+<html><body>
+<h1>Calculadora de IMC</h1>
+<form method="POST">
+    Peso kg: <input type="number" step="any" name="peso" value="$peso"><br>
+    Altura m: <input type="number" step="any" name="altura" value="$altura" placeholder="1.70"><br>
+    <button>Calcular IMC</button>
+</form>
+$if imc != "":
+    <h2>Tu IMC: $imc</h2>
+    <h3>Estado: $estado</h3>
+</body></html>
