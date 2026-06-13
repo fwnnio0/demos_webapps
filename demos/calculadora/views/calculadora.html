@@ -4,11 +4,12 @@ $def with(numero_1, numero_2, resultado)
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Calculadora FW</title>
+    <title>Calculadora PRO</title>
     <style>
         body { font-family: Arial; text-align: center; margin-top: 50px; }
-        input, select, button { padding: 10px; margin: 5px; font-size: 16px; }
-        h2 { color: green; }
+        input, button { padding: 10px; margin: 5px; font-size: 16px; }
+        .resultado { color: green; font-size: 24px; font-weight: bold; }
+        .botones button { width: 70px; }
     </style>
 </head>
 <body>
@@ -18,25 +19,22 @@ $def with(numero_1, numero_2, resultado)
         <label>Número 1:</label><br>
         <input type="number" step="any" name="numero_1" value="$numero_1" required><br><br>
         
-        <label>Operación:</label><br>
-        <select name="operacion">
-            <option value="sumar">Sumar +</option>
-            <option value="restar">Restar -</option>
-            <option value="multiplicar">Multiplicar *</option>
-            <option value="dividir">Dividir /</option>
-            <option value="raiz">Raíz cuadrada √ solo usa Número 1</option>
-            <option value="potencia">Potencia ^</option>
-            <option value="modulo">Módulo % residuo</option>
-            <option value="limpiar">Limpiar C</option>
-        </select><br><br>
-        
         <label>Número 2:</label><br>
         <input type="number" step="any" name="numero_2" value="$numero_2" required><br><br>
         
-        <button type="submit">Calcular</button>
+        <div class="botones">
+            <button type="submit" name="operacion" value="sumar">+</button>
+            <button type="submit" name="operacion" value="restar">-</button>
+            <button type="submit" name="operacion" value="multiplicar">*</button>
+            <button type="submit" name="operacion" value="dividir">/</button>
+            <button type="submit" name="operacion" value="raiz">√</button>
+            <button type="submit" name="operacion" value="potencia">^</button>
+            <button type="submit" name="operacion" value="modulo">%</button>
+            <button type="submit" name="operacion" value="limpiar">C</button>
+        </div>
     </form>
 
-        <h2>Resultado: $resultado</h2>
+    <label class="resultado">Resultado: $resultado</label>
 
     <br>
     <a href="/">Volver al Index</a>
