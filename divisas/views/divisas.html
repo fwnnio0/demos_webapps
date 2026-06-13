@@ -1,0 +1,17 @@
+$def with(cantidad, resultado, simbolo)
+<!DOCTYPE html>
+<html><body>
+<h1>Conversor de Divisas a MXN</h1>
+<form method="POST">
+    Cantidad: <input type="number" step="any" name="cantidad" value="$cantidad"><br>
+    Moneda:
+    <select name="moneda">
+        <option value="usd">Dólar USD</option>
+        <option value="eur">Euro EUR</option>
+        <option value="cad">Dólar Canadiense CAD</option>
+    </select><br><br>
+    <button>Convertir</button>
+</form>
+$if resultado != "":
+    <h2>$cantidad $simbolo = $resultado MXN</h2>
+</body></html>
