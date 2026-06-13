@@ -1,0 +1,11 @@
+$def with(celsius, fahrenheit)
+<!DOCTYPE html>
+<html><body>
+<h1>Convertidor °C a °F</h1>
+<form method="POST">
+    <input type="number" step="any" name="celsius" value="$celsius">
+    <button>Convertir</button>
+</form>
+$if fahrenheit != "":
+    <h2>$celsius °C = $fahrenheit °F</h2>
+</body></html>
