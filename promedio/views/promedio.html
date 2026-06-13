@@ -1,0 +1,13 @@
+$def with(calificacion1, calificacion2, calificacion3, promedio, mensaje)
+<!DOCTYPE html>
+<html><body>
+<h1>Promedio</h1>
+<form method="POST">
+    Calificacion 1: <input type="number" step="any" name="calificacion1" value="$calificacion1"><br>
+    Calificacion 2: <input type="number" step="any" name="calificacion2" value="$calificacion2"><br>
+    Calificacion 3: <input type="number" step="any" name="calificacion3" value="$calificacion3"><br>
+    <button>Calcular</button>
+</form>
+$if promedio != "":
+    <label class="resultado">Promedio: $promedio</label>
+</body></html>
